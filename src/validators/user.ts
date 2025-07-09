@@ -3,7 +3,7 @@ import { z } from "zod";
 // At least 8 characters, one uppercase, one lowercase, one digit, one special character
 const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[@$!%*?&])[A-Za-z\\d@$!%*?&]{8,}$/;
 
-export const registerSchema = z.object({
+export const register = z.object({
     email: z.string().email({ message: "Invalid email address" }),
     password: z.string().min(8, "Password must be at least 8 characters").regex(passwordRegex, "Password must contain at least one uppercase letter, one lowercase letter, one digit, and one special character"),
     profile: z.object({
@@ -14,7 +14,7 @@ export const registerSchema = z.object({
     }),
 });
 
-export const loginSchema = z.object({
+export const login = z.object({
     email: z.string().email({ message: "Invalid email address" }),
     password: z.string().min(1, "Password is required"),
 });
