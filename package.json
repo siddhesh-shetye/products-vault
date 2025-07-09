@@ -11,7 +11,8 @@
     "@prisma/client": "^5.0.0",
     "bcryptjs": "^2.4.3",
     "express": "^5.0.0",
-    "jsonwebtoken": "^9.0.2"
+    "jsonwebtoken": "^9.0.2",
+    "zod": "^3.25.76"
   },
   "devDependencies": {
     "@types/bcryptjs": "^2.4.6",
